@@ -1,0 +1,54 @@
+chensa & danielwal
+312117724 204810329
+Chen Sasson & Daniel Walters
+
+=============================
+=  README for ex9: asteroids game =
+=============================
+==================
+=  Description:  =
+==================
+
+Using classes and objects we built a program that runs the famous asteroid
+game.
+The different objects in the game such as the ship, the asteroids and the
+torpedoes were all of different class with different qualities and functions
+that they were capable of preforming.
+We used the main python file "asteroids_main" to get the interactions
+between the different class objects to work.
+
+======================
+=  Special Comments  =
+======================
+
+3 things to consider while writing the game:
+
+1) MOVE FUNCTION - we could write this function independently for each class or
+ under the "asteroids_main" file.
+ We chose to write it once under the "asteroids_main" file since it works and
+ applies the same calculation for all objects so under the main file we could
+ apply one function to move all 3 game objects.
+
+2) DELETE ASTEROID/TORPEDO - The delete functions are 2 lines long. We could
+   have added them under the different collision function or write 2 extra
+   functions. We chose to write a unique function to delete asteroids and a
+   unique function to delete torpedoes since this way the code looks better and
+   seems more organized. This way in the main collision functions we added one
+   line each time instead of 3 and kept it shorter.
+
+3) KEYBOARD ACTION - To check the different keyboard action done by the player
+   we could write a specific function for each action. Since the code works in
+   a "passive" way, each loops has only one action updated. Because of this, we
+   decided to check all possibilities for keyboard action in a single function
+   that runs once in every game loop and can update 1 movement each time.
+   This way, our game loop function runs through less functions to check every
+   time it runs and for that reason it is faster and less complex.
+
+
+======================
+=   Useful websites  =
+======================
+
+https://stackoverflow.com/questions/9875964/python-converting-radians-to
+-degrees - used this to find how to convert degrees to radians using python.
+

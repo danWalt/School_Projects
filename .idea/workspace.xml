@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cb3c6c74-bc1f-42e8-8c6f-024886dbbe78" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/School_Projects.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_AVL_tree_implementation/AvlTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_AVL_tree_implementation/BinarySearchTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_AVL_tree_implementation/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_AVL_tree_implementation/TreeNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_file_processor/FileProccessorUML.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_file_processor/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_file_processor/ex5.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_file_processor/filesprocessing/CommandReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_file_processor/filesprocessing/DirectoryProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_file_processor/filesprocessing/ErrorException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_file_processor/filesprocessing/Printer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_file_processor/filesprocessing/section/Section.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_file_processor/filesprocessing/section/SectionFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_file_processor/filesprocessing/section/WarningException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_file_processor/filesprocessing/section/filter/AllFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_file_processor/filesprocessing/section/filter/Filter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_file_processor/filesprocessing/section/filter/FilterFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_file_processor/filesprocessing/section/filter/NameFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_file_processor/filesprocessing/section/filter/PermissionsFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_file_processor/filesprocessing/section/filter/SizeFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_file_processor/filesprocessing/section/order/AbsOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_file_processor/filesprocessing/section/order/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_file_processor/filesprocessing/section/order/OrderFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_file_processor/filesprocessing/section/order/SizeOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_file_processor/filesprocessing/section/order/TypeOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_hashset/Brick.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_hashset/ClosedHashSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_hashset/CollectionFacadeSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_hashset/Ex3Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_hashset/HashSetCapacity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_hashset/ListNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_hashset/OpenHashSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_hashset/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_hashset/SimpleHashSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_hashset/SimpleSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_hashset/data1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_hashset/data2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_hashset/ex3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_interpreter/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_interpreter/ex6.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_interpreter/oop/ex6/main/FileReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_interpreter/oop/ex6/main/ProjectRegex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_interpreter/oop/ex6/main/Sjavac.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_interpreter/oop/ex6/main/WarningException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_interpreter/oop/ex6/scope/GlobalScope.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_interpreter/oop/ex6/scope/IfWhileScope.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_interpreter/oop/ex6/scope/MethodScope.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_interpreter/oop/ex6/scope/Scope.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_interpreter/oop/ex6/syntax/IfWhileSyntax.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_interpreter/oop/ex6/syntax/MethodSyntax.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_interpreter/oop/ex6/syntax/Syntax.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_interpreter/oop/ex6/syntax/VariablesSyntax.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_interpreter/oop/ex6/variable/BooleanVar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_interpreter/oop/ex6/variable/CharVar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_interpreter/oop/ex6/variable/DoubleVar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_interpreter/oop/ex6/variable/IntVar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_interpreter/oop/ex6/variable/StringVar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_interpreter/oop/ex6/variable/Variable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_interpreter/oop/ex6/variable/VariableFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_ships/AggresiveShip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_ships/BasherShip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_ships/DrunkardShip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_ships/HumanShip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_ships/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_ships/RunnerShip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_ships/SpaceShip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_ships/SpaceShipFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_ships/SpaceWars.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_ships/SpecialShip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/.idea/codeStyleSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/.idea/ex9.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/.__sources" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/.__static" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/._genindex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/._index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/._objects.inv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/._screen.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/._search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/._searchindex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_sources/._index.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_sources/._screen.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_static/._ajax-loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_static/._basic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_static/._classic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_static/._comment-bright.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_static/._comment-close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_static/._comment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_static/._default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_static/._doctools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_static/._down-pressed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_static/._down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_static/._file.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_static/._jquery-1.11.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_static/._jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_static/._minus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_static/._plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_static/._pygments.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_static/._searchtools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_static/._sidebar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_static/._underscore-1.3.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_static/._underscore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_static/._up-pressed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_static/._up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/__MACOSX/_static/._websupport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_sources/index.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_sources/screen.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_static/ajax-loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_static/basic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_static/classic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_static/comment-bright.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_static/comment-close.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_static/comment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_static/default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_static/doctools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_static/down-pressed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_static/down.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_static/file.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_static/jquery-1.11.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_static/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_static/minus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_static/plus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_static/pygments.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_static/searchtools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_static/sidebar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_static/underscore-1.3.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_static/underscore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_static/up-pressed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_static/up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/_static/websupport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/asteroid.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/asteroids_main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/ex9.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/screen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/ship.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python_asteroids/torpedo.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\Daniel Walters\PycharmProjects\School_Projects\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="8" />
+    <option name="width" value="1920" />
+    <option name="height" value="1038" />
+  </component>
+  <component name="ProjectId" id="1XGTyhyQRPdKSBVyQcmFhj0OcJO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.asteroids_main">
+    <configuration name="asteroids_main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="School_Projects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ex9" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ex9/asteroids_main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="four_in_a_row (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="School_Projects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/4_in_row" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/4_in_row/four_in_a_row.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="four_in_a_row" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="School_Projects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Documents/Hebrew University/Year_1/Semester_A/Computer Science/Exercises/ex12/EX13" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Documents/Hebrew University/Year_1/Semester_A/Computer Science/Exercises/ex12/EX13/four_in_a_row.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cb3c6c74-bc1f-42e8-8c6f-024886dbbe78" name="Default Changelist" comment="" />
+      <created>1580671687794</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580671687794</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.configurationType" implementationName="PythonConfigurationType" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1580672195384">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1580672195384" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1580672195383">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1580672195383" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1580672195383">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1580672195383" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1580672195383">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1580672195383" />
+    <state x="285" y="57" key="SettingsEditor" timestamp="1580671797412">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="285" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1580671797412" />
+  </component>
+</project>

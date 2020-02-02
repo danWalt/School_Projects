@@ -1,0 +1,62 @@
+daniel.walters
+
+
+
+=============================
+=      File description     =
+=============================
+SpaceShip.java - Contains the basic actions a ship performs.
+SpaceShipFactory.java - Receives an argument list used to create the current game spaceships.
+AggressiveShip - Contains the implementation of the aggressive ship round actions.
+BasherShip - Contains the implementation of the basher ship round actions.
+DrunkardShip - Contains the implementation of the Drunkard ship round actions.
+HumanShip - Contains the implementation of the human ship round actions.
+RunnerShip - Contains the implementation of the runner ship round actions.
+SpecialShip - Contains the implementation of the special ship round actions.
+
+=============================
+=          Design           =
+=============================
+In the game design I used "SpaceShip" as an abstract class. Since all spaceships are able to shot, teleport,
+move and all spaceships have the same starting life and energy I though it'll be a good solution to implement
+the basics of all different spaceships in the same class.
+The thing that differs between the different type spaceships is how they interact during the game which is
+implemented in the "doAction" function. That is why I didn't implement a main doAction method but decided to
+implement a different doAction method for each sub spaceship according to it's way of behaviour.
+
+In the SpaceShipFactory class I used a "switch case" system to determine the needed ships.
+
+The code works in a way where all basic actions of a ship are mutual via the SpaceShip class and then each
+class has it's own doAction method.
+If there will be a requirement to add a new spaceship to the game, all you have to do is add another case in
+the SpaceShipFactory class based on the new spaceship representation and write a doAction method in the new
+spaceship class.
+
+Since most of the spaceships are nonhuman I decided that the default return value for the getImage method will
+ be the enemy spaceship image. In the human ship method I overrode this function to use the human ship method
+when needed.
+
+The turn right and left values are used as protected in the SpaceShip class. Although I thought it should be
+private in each sub spaceship class I didn't know if it should be since it means I would rewrite the values in
+ each spaceship class.
+
+=============================
+=  Implementation details   =
+=============================
+
+DrunkardShip - The driver fell a sleep turning right! Meanwhile, he may or may not lean forward in order to
+               accelerate, this is random.
+               But! the driver is almost aware he has to protect himself so if he isn't accelerating he makes
+               sure to shot at any coming spaceships.
+
+
+SpecialShip - The special ship has a few different attributes than the rest of the spaceships. It's energy
+              levels are restored to max after every round and it's shots cool down counter decreases in 2 every rounds
+              meaning the ship can shoot every 4 rounds instead of 7.
+              Whenever the spaceship fills threatened it shoots and turns on it's shield in case of a
+              collision.
+
+
+=============================
+=    Answers to questions   =
+=============================

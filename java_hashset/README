@@ -1,0 +1,172 @@
+daniel.walters
+
+=============================
+=      File description     =
+=============================
+Brick.java - a Class wrapping a linked list used in the open hash set class
+ClosedHashSet.java - a class representing and implementing a closed hash set
+CollectionFacadeSet - a  facade design class used to wrap different collection classes
+HashSetCapacity.java - an interface for the capacity method
+OpenHashSet.java - a class representing and implementing an open hash set
+SimpleHashset.java - an abstract class indicating the basic  methods for a hash set
+SimpleSet.java - an interface with methods a hash set should be able to do
+SimpleSetPerformanceAnalyzer.java - a class calculating performance of different set types
+StringWrapper.java - a Class wrapping a string used in the closed hash set class
+RESULTS - a file that lists all the results of the performance test we had to perform and compare
+
+=============================
+=          Design           =
+=============================
+In my design, I used a wrapper both in the open hash set and in the closed hash set. The different methods
+needed are included in the simplehashset or the simpleset and extra methods are private in each hash set file.
+the open hash set is an array of linkedlist wrapper objects and the closed hash set is an array of String
+wrapper objects (I did this in order to include a flag to track deletion of values from the set).
+
+Both hash sets have similar methods such as contain, delete, add but they have a different way of action in
+each set.
+I used the same "clamp" method in the 2 hash sets calculation since the calculation is the the same but a
+different index is required. I figured if I use the closed hash set formula but let the index be 0 for the
+open hash set it is the same as the open hash set formula.
+
+While rehashing I kept the original hash set in a temporary hash set and then moved the old elements to
+the new hash table while calculating new indexes.
+
+
+=============================
+=  Implementation details   =
+=============================
+
+Open hashset table - I created a class "linkedlistwrapper" that wraps a linked list java object and the open
+hash set table is an array of linkedlist objects.
+
+Closed hashset deletion mechanism - The closed hash set is an array of a string wrapper. I kept track of
+deletion of string with a flag and updated the status regarding of the content of the cell and if it was
+deleted or not.
+
+Warmup - I run the warmup 60000 iterations before  running the actual tests.
+
+
+=============================
+=          Results          =
+=============================
+#These values correspond to the time it takes (in ms) to insert data1 to all data structures
+OpenHashSet_AddData1 = 38372
+ClosedHashSet_AddData1 = 162104
+***TreeSet_AddData1 = 64***
+LinkedList_AddData1 = 50875
+HashSet_AddData1 = 75
+
+#These values correspond to the time it takes (in ms) to insert data2 to all data structures
+OpenHashSet_AddData2 = 24
+ClosedHashSet_AddData2 = 89
+TreeSet_AddData2 = 48
+LinkedList_AddData2 = 23235
+***HashSet_AddData2 = 9***
+
+#the time it took to initialize with the contents of data1.txt compared to the time it took to initialize
+with data2.txt. Data1 is the first number followed by Data 2
+OpenHashSet - 38372, 24
+ClosedHashSet - 162104, 89
+TreeSet - 64, 48
+LinkedList - 50875, 23235
+HashSet - 75, 9
+
+#These values correspond to the time it takes (in ns) to check if "hi" is contained in
+#the data structures initialized with data1
+OpenHashSet_Contains_hi1 = 101
+***ClosedHashSet_Contains_hi1 = 87***
+TreeSet_Contains_hi1 = 142
+LinkedList_Contains_hi1 = 756426
+HashSet_Contains_hi1 = 96
+
+
+#These values correspond to the time it takes (in ns) to check if "-13170890158" is contained in
+#the data structures initialized with data1
+OpenHashSet_Contains_negative = 972205
+ClosedHashSet_Contains_negative = 3358233
+TreeSet_Contains_negative = 183
+LinkedList_Contains_negative = 988881
+***HashSet_Contains_negative = 25***
+
+compare the time it took for the query contains(“hi”) as opposed to “-13170890158”
+OpenHashSet - 101, 972205
+ClosedHashSet - 87, 3358233
+TreeSet - 142, 183
+LinkedList - 756426, 988881
+HashSet - 96, 25
+
+#These values correspond to the time it takes (in ns) to check if "23" is contained in
+#the data structures initialized with data2
+OpenHashSet_Contains_23 = 74
+ClosedHashSet_Contains_23 = 70
+***TreeSet_Contains_23 = 49***
+LinkedList_Contains_23 = 120
+HashSet_Contains_23 = 88
+
+#These values correspond to the time it takes (in ns) to check if "hi" is contained in
+#the data structures initialized with data2
+OpenHashSet_Contains_hi2 = 14
+ClosedHashSet_Contains_hi2 = 68
+TreeSet_Contains_hi2 = 68
+LinkedList_Contains_hi2 = 457648
+***HashSet_Contains_hi2 = 9***
+
+compare the time it took for the query contains(“hi”) as opposed to “23”
+OpenHashSet - 74, 14
+ClosedHashSet - 70, 68
+TreeSet - 49, 68
+LinkedList - 120, 457648
+HashSet - 88, 9
+
+=============================
+=    Answers to questions   =
+=============================
+●Account, in separate, for OpenHashSet’s and ClosedHashSet’s bad results for data1.txt.
+
+OpenHashSet - All values are mapped to the same index so while adding data1 we are creating a big linkedlist
+inside cell number 0 of the hashset. For each element, it is required to go through all previous added
+elements so we get a O(n^2) run time. We can see that for data1 the running time of the open hashset and the
+linkedlist is similar since the same thing happens for both of them.
+
+ClosedHashSet - Since all data1 elements are mapped to the same cell, they have to use quadratic probing but
+this also causes the same indexes for all words so the closed hash set has to keep recalculating a new index
+with a new hashing index. For each new item added it will calculate a new index as the number of previous
+added items to the hashset. We then encounter the same problem while rehashing which causes the add method to
+run even longer.
+
+●Summarize the strengths and weaknesses of each of the data structures as reflected by the results.
+HashSet - Doesn't include duplicates, fastest. No obvious weaknesses
+TreeSet - Doesn't include duplicates, keeps a comparision between the different values added. Works great with
+ values that are easy to add such as numbers, not as good with strings.
+LinkedList - LinkedList isn't as fast especially when multiple values are mapped to the same Linked list.
+
+●Which would you use for which purposes?
+If I only need to add different random values to a set as fast as possible and retrieve them as fast as
+possible I'll use a "HashSet".
+If I'll need to keep track of ratio between comparable values while adding values I'll use a "TreeSet".
+If there is an obvious relation between the values such as a clear head, which value follows it and which
+value should be the last I'll rather use a "LinkedList".
+
+● How did your two implementations compare between themselves?
+OpenHashSet was most of the times faster and with an obvious margin. Whenever ClosedHashSet was faster it was
+only by a small margin. It is worth mentioning the whenever the ClosedHashSet was faster it was also faster
+than Java's HashSet.
+
+● How did your implementations compare to Java’s built in HashSet?
+Except for adding data1, My OpenHashSet performance wasn't a lot worse than JAVA's HashSet.
+ClosedHashSet wasn't as successful but did perform as good or better at certain tests.
+
+● What results surprised you and which did you expect?
+The TreeSet results were really fast and even faster then hashset at times.
+The LinkedList results were the slowest and with a big margin. Shows how big of a difference is O(n) compared
+to the TreeSet running time of O(logn).
+
+● Did you find java’s HashSet performance on data1.txt surprising? Can you explain it? Can google?
+The reason for this performance is that java's HashSet uses a HashMap way of indexing.
+HashSet internally stores elements as the keys of a HashMap, Since keys in a Map are unique, all
+the Set does is map a slug to every key to test for presence of the element so it checks if the set already
+contains the element a lot faster.
+
+● If you tried clamping expressions to valid indices in more than one way, what were they and how significant
+was the speed-up?
+I Didn't try other ways.

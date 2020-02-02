@@ -1,0 +1,110 @@
+daniel.walters
+
+
+=============================
+=      File description     =
+=============================
+AvlTree.java - a class extending BST, implements the features an AVL tree has such as rotation to keep
+it balanced.
+AvlNode.java - a class extending the TreeNode class, used to implement an AVL tree node.
+TreeNode.java - a class used to create tree nodes.
+BinarySearchTree.java - a class implementing a BST.
+
+=============================
+=          Design           =
+=============================
+Since an AVL tree is a specific type of a BST we started by creating a BST class that implements all general
+methods such a tree should have such as add, delete, successor and the possibility to iterate over the given
+tree values from the lowest value currently in the tree to it's highest.
+The BST uses TreeNode objects. Each object has a data field, right and left son fields, father fields and it's
+height.
+We Then implemented the AVL tree class which extends the BST. Most methods are similar or identitcal between
+the AVL and BST since an AVL tree is a type of a BST. The main difference is what happens after the "add" or
+"delete methods". the methods themselves are the same but since an AVL tree needs to stay balanced there are a
+few different things to check following an addition or removing a node.
+The way this is checked and the different rotations methods are kept in the AVL tree and are used after an
+addition or after deleting a node from the tree.
+
+=============================
+=  Implementation details   =
+=============================
+
+ADD METHOD - BST implements a basic add method. As a start the method checks for a root, if a root doesn't
+            exist, it will create a new one. If a root does exist, a helper method called "addandreturnNode"
+            is called to action. This helper method will search the for the value in the tree, if the value is
+            not already in the tree, the method will call another helper method called "addhelper" that will
+            add a new node in the right place. The "addAndReturnNode" method then updates the heights of all
+            relevant nodes (from the new node to the root).
+            The "addAndReturnMethod" was created  so that we can get back the added nodes, so that the AVLTree
+            can check the node's predecessors' heights and preform the required balance checks and
+            rotations if needed.
+            so the AVL add will add the node in the same way as BST, but then it will check the balance of
+            the relevant node's and rebalance the tree if needed.
+
+
+
+DELETE METHOD - BST implements a delete method. This method starts by checking if the node is in a tree (to
+                make sure there is a node to delete with the given value). If a node with the given value
+                exists a "deleteHelper" method is called. This method checks the possible conditions of a node
+                regarding number of sons. Based on a node sons, the method is able to connect the right node
+                instead of the deleted one and to return the new node. This method also makes sure to update
+                the required heights.
+                The helper method returns a node, this is also implemented like this because the AVL tree
+                delete method required a node to preform balance checks on and rotate if needed.
+                the AVL delete method will do the same thing, using deleteHelper, but after deleting
+                the method will check the balance of the tree and correct it if needed.
+
+
+=============================
+=    Answers to questions   =
+=============================
+
+Question:
+         Find a series of 12 numbers, such that when they are inserted into an empty AVL tree
+         one-by-one, the result will be a tree of height 4 (insertions only, no deletions).
+Answer:
+       By inserting the following sequence one-by-one a tree of height 4 is created:
+       6,3,9,12,0,15,18,2,1,8,16,19
+
+Question:
+         What is the asymptotic running time complexity of the tree construction done in AvlTree(int[]
+         data)?
+Answer:
+       The running time complexity of the tree construction is of O(nlogn). The constructor uses a for loop to
+       go over each value in the array. The current value is then sent to the add method and then
+       we might need to preform rotations. Adding a node to an AVL tree takes O(2logn)=O(logn) and the action
+       is preformed n times (since there are n elements in the given array).
+
+Question:
+         Bonus: What is the best possible running time complexity for a specific case?
+Answer:
+       A specific case with best running time complexity will be a given array where the values are oredered
+       in a way were the root is first followed by it's 2 sons and so on.
+       If such an array is given then no rotations are needed and the running time will be O(n)
+
+Question:
+         What is the asymptotic running time complexity of the tree construction done in
+         AvlTree(AvlTree avlTree)?
+Answer:
+       The asymptotic running time complexity of the tree construction is O(nlogn).
+
+Question:
+         What is the best possible running time complexity for a specific case? (this is not a bonus
+         question!)
+Answer:
+       The best possible running time complexity for a specific case is O(n) which is the situation if the
+       iteration over the given tree is ordered and goes through the root to it's sons and so on. In this way,
+       each node will be added to it's end location and no rotation will be preformed.
+
+Question:
+         What is the asymptotic running time complexity of your implementation of the operation
+         done in findMinNodes(int h)?
+
+Answer:
+       Our implementation is a mathematical calculation such that our running time complexity is O(1).
+
+Question:
+         Is that the best possible asymptotic running time complexity? If not, what is the best
+         achievable complexity?
+Answer:
+       Yes, it is.

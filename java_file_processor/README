@@ -1,0 +1,83 @@
+daniel.walters
+may.tal
+
+
+
+=============================
+=      File description     =
+=============================
+AllFilter.java - a class that filters a given files list and returns them all.
+Filter.java - an abstract class indicating the different filter types what they should do.
+FilterFactory.java - a class that is given an argument and returns a filter object matching the argument.
+NameFilter.java - a class that handles all name related filtering.
+PermissionsFilter.java - a class that handles all permission related filtering.
+SizeFilter.java - a class that handles all size related filtering.
+AbsOrder.java - a class that determines files order based on their absolute path.
+Order.java - an abstract class indicating the different order types what they should do.
+OrderFactory.java - a class that is given an argument and returns an order object matching the argument.
+SizeOrder.java - a class that determines files order based on their sizes.
+TypeOrder.java - a class that determines files order based on their type.
+Section.java - a class that given arguments returns a section object that has the information regarding how to
+filter and how to order a given list of file.
+SectionFactory.java - a class that splits the command file into sections and creates a section object for each
+ given section.
+WarningException.java - in case of bad format regarding the given filter type or order type. this class will
+throw an exception.
+CommandReader.java - this class process the command file into a list where each cell is a different line from
+the file.
+DirectoryProcessor.java - the main class that calls the rest of the working classes to action.
+ErrorException.java - in case of bad formatting or missing required sections in the command file this class
+will throw an exception.
+Printer.java - this classes prints the filtered and ordered files and the given warnings in each section one
+by one.
+
+=============================
+=          Design           =
+=============================
+
+In our design we tried splitting the different actions into different packages and different classes.
+The section package is using the Filter and Order classes so under "section" package both "filter" and "order"
+ packages are placed.
+Since there are many different filters but there are a lot with a common type such as filters that process the
+ name, filters that process the size and so on. We decided to create a joint class for different filter types
+ and not different classes for different filter that exist since there are 11 different filters.
+
+We decided on having a main class that only keeps the files from the arguments and then calls different
+function to do the rest of the work. The command file reading is done in a CommandReader and this class
+purpose is to "translate" the commands text file into an array that other java classes and methods can access
+easily.
+
+We ended up using a lot of linked list since this is an array type in java that can be changed "on the go"
+without the need to determine it's size before we start. Since we couldn't know how many files are given, how
+many lines are in the command file or how many section will be created we found the linked list to be the most
+ efficient and comfortable for us to use.
+
+Regarding the Exceptions:
+We created 2 classes to handle them. Both class extend java's exception class.
+The first class handles the Errors that are an option during the files and folders processing. If such an
+exception is thrown the rest of the filtering process is stopped.
+The second class handles the warnings that can happen during the filtering and ordering part of the process.
+If such a warning happens, it is collected and printed at the end of the ordering part of the code.
+
+We used java's built "Sort" function to sort our matched files. The Sort function was given a different Order
+object each time that has the compare method in which the files were sorted into a linked list before being
+printed.
+
+We were thinking in the beginning where should the order versus reverse ordered process happen. We figured
+that if each Order object does both of the actions we will have to write a duplicate codes that orders from
+first to last or from last to first in each object class. In order to minimize code repetition we decided it
+would be best if the order objects always sort the files first to last and then in the print function the
+"reverse" parameter is checked and the files in the linked list are printed first to last or last to first
+based on that.
+In this way, instead of repeating the sort last to first 3 times we only had to check it once right before
+printing the filtered and ordered files.
+
+=============================
+=  Implementation details   =
+=============================
+
+
+
+=============================
+=    Answers to questions   =
+=============================

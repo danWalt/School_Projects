@@ -1,0 +1,120 @@
+daniel.walters
+may.tal
+
+
+
+=============================
+=      File description     =
+=============================
+
+WarningException.java - in case where the sJava file is in a bad format of code that won't compile, a warning
+error will be thrown.
+FileReader.java - This class does the work, processes an sJava file and checks if it is a legal java code or
+not.
+Sjavac.java - The main method is here, catches all thrown exception.
+ProjectRegex.java - a class that contains all regex patterns used in the project
+
+GlobalScope.java - a class representing the global scope, this scope is the "father" of all other scopes.
+IfWhileScope.java - a class that represents entrance to an if statement or a start of a while loop.
+MethodScope.java - a class creating a new method scope. can only be located under the global scope.
+Scope.java - an abstract class containing the parameters a scope object holds.
+
+BooleanVar.java - a class that creates a boolean variable object.
+CharVar.java -  a class that creates a character variable object.
+DoubleVar.java - a class that creates a double variable object.
+IntVar.java - a class that creates an int variable object.
+StringVar.java - a class that creates a String variable object.
+Variable.java - an abstract class containing the parameters a variable object holds.
+VariableFactory.java - a factory that given the required arguments return different type variable objects.
+
+IfWhileSyntax.java - a class that checks if an if condition or while loop is valid.
+MethodSyntax.java - a class that checks that the arguments a method takes are valid.
+VariableSyntax.java - a class that checks the variable row is valid.
+Syntax.java - an abstract class to test different syntax in the code.
+
+=============================
+=          Design           =
+=============================
+
+In our design, we divided our code into the different objects we recognized. First, we created the main method
+ which checks the given arguments are valid. We then created the FileReader class with process the given file
+ and basically does all the work of this exercise. Since there are 2 different exception required we used a
+ different exception class for each one.
+
+The processing of the code is done based on scopes and variable types and initializing. We noticed that there
+are 4 scopes but, If and While are handled the same so we merged them into a joint scope. Furthermore, the
+scopes all have the same parameters so we found it helpful to use an abstract class determining each scope
+build.
+All variables have the same values and the type is the only difference between them all. Therefore, we decided
+ to use a factory that returns different type of objects depending on their type. All variables hold similar
+ parameters.
+
+
+=============================
+=  Implementation details   =
+=============================
+
+Since there were clear instructions on which patterns are legal and which aren't. We used regex to find the
+different patterns in the code file. Once we found a known pattern, we preformed several tests to determine if
+ the current line is legal or not.
+
+ At the beginning, we thought about the different option to keep track of the current scope. We ended up
+ choosing using the java built in Stack since methods in java are handled in a "Last in First out" which is
+ how a stack is managed.
+
+while checking the different things needed for each code line, a Warning Exception is thrown if a problem was
+found. The main method in Sjavac catches the thrown exception and prints the required message to the screen at
+ the end of the processing.
+ We decided to implement our code this way because, all FileReader actions finally return to the Sjavac main
+ method so we figured out it is most logical this is where we want to catch all thrown exceptions.
+
+
+=============================
+=    Answers to questions   =
+=============================
+
+Regarding exception handling we answered in the implementation details.
+
+* How would you modify your code to add new types of variables (e.g., float)?
+
+If we would like to support extra variables types we would need to add an extra case in the Variables Factory
+method and create another class that extends the Variable abstract class and uses the "super" constructor.
+
+* Different methods types
+
+In order to support different types we would have to first of all change the regex used to find a method line.
+The regex will have to find different method return types and split the type into a group.
+In the method scope an extra parameter will be added - "return type" that will hold the current function
+return value type.
+Finally, when a return line is present and the following line is a "}" symbol, we will have to check the the
+object returned type matches the method return type.
+
+
+* Inheritage of files (just like class inheritage, so virtual functions can appear, and a
+  sub-file may use a method from a parent file).
+
+In order to support inheritage of files we would have to add an extra Scope class - FileScope. This scope will
+ be very similar to the other scopes already available but will have to hold as parent scopes different files.
+  each file scope will contain a list of it's methods and variables and when inheritage of files is used we
+  can access using the father file scope all present methods and variables in that file.
+We will also be required to add a new regex to find a case of file iheritage use. This will happen in the File
+ Reader.
+
+The Sjavac call to FileReader on a given file will probably be changed to a while loop, calling File Reader
+with a new file as long as an argument representing a file location exists.
+
+
+
+REGEX EXPRESSIONS:
+1) ("^\\s*void\\s+([A-Za-z]\\w*)\\s*\\((.*)\\)\\s*\\{\\s*$")
+
+This regex expression is used to find a method declaration. makes sure the line start with no spaces followed
+by "void". We then have a method name and any given number of arguments.
+
+
+2) ("(final\\s)?(boolean|int|double|String)\\s(.+)")
+
+This regex expression is used to handle a variable declaration row. We check if the variable is final or not
+and then require a type for the variable. The final part of the row can contain any number of variables names
+and value assignments. Therefore, we sent the last group of the regex as a whole to the VariableFactory were
+we handle th String received and split it into different new variables.
